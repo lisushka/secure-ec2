@@ -4,7 +4,7 @@ Now that we're done with the lab, we need to clean up all of the resources that 
 
 1. Navigate to the RDS console, and delete the RDS database.  This will take 5-10 minutes.
 
-1. Navigate to the EC2 console, and terminate the EC2 instance.  This will take 5-10 minutes.
+1. Navigate to the EC2 console, and terminate the EC2 instance.  This will take 5-10 minutes.  Make sure that you also release the Elastic IP attached to the instance as well, otherwise you'll be billed for it.
 
 1. Navigate to the VPC management page, and delete the following resources:
     - security groups
