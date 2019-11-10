@@ -21,7 +21,7 @@ The principle of least privilege holds that we want people to have the exact amo
 1. Click the link shown in the Success dialog below, and use your IAM username and password to sign in.
 
 ![Success dialog](4-success.png)
-![IAM user login page](4-loginpage.png)
+![IAM user login page](4-iamlogin.png)
 
 ## Setting up the VPC
 
