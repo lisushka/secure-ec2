@@ -33,7 +33,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 1. Select 'VPC with Public and Private Subnets', and click through to the next step.
 
-![VPC creation wizard](6-vpctype.png)
+    ![VPC creation wizard](6-vpctype.png)
 
 1. Set up the VPC using the settings below.  We'll be using a `t2.micro` instance for our NAT for this workshop, as it's covered by the AWS Free Tier.  You'll also need to set up a key pair as part of this, and download it to your local machine.  You'll need it in later steps.
 
@@ -67,7 +67,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![Network rules](13-ec2public.png)
 
-1. Create a public security group to attach to the instance.  You'll notice that there's a warning at the bottom of the page.  If we leave this rule like this, then anyone will be able to SSH into the instance.  Get your Internet connection's public IP address (`!ip` in Google will give it to you), and then replace `0.0.0.0/0` with `your.ip.address.digits/32`.  This means that only people with your public IP address can acces the instance via SSH.
+1. Create a public security group to attach to the instance.  You'll notice that there's a warning at the bottom of the page.  If we leave this rule like this, then anyone will be able to SSH into the instance.  Get your Internet connection's public IP address (`!ip` in Google will give it to you), and then replace `0.0.0.0/0` with `your.ip.address.digits/32`.  This means that only people with your public IP address can access the instance via SSH.
 
     ![Security groups](14-ec2sg.png)
 
