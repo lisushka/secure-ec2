@@ -8,20 +8,20 @@ The principle of least privilege holds that we want people to have the exact amo
 
 1. Navigate to the IAM console, and click the 'Add user' button.
 
-![IAM console](1-iampage.png)
+    ![IAM console](1-iampage.png)
 
 1. In the 'Add user' section, select 'AWS Management Console access', and 'Custom password'.  Enter a password that you'll remember - you'll be using this account for the duration of the workshop.
 
-![IAM access types](2-accesstype.png)
+    ![IAM access types](2-accesstype.png)
 
 1. In the 'Permissions' section, select 'Attach existing policies directly', and then add the list of policies in the srceenshot below.  You can use the search bar to find them quickly.  Then, click through to the Review step, make sure that the list matches the one below, and click 'Create'.
 
-![IAM access policies](3-accesspolicies.png)
+    ![IAM access policies](3-accesspolicies.png)
 
 1. Click the link shown in the Success dialog below, and use your IAM username and password to sign in.
 
-![Success dialog](4-success.png)
-![IAM user login page](4-iamlogin.png)
+    ![Success dialog](4-success.png)
+    ![IAM user login page](4-iamlogin.png)
 
 ## Setting up the VPC
 
@@ -29,7 +29,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 1. Navigate to the VPC management page, and click on the 'Launch VPC Wizard' button.
 
-![VPC management page](5-vpc.png)
+    ![VPC management page](5-vpc.png)
 
 1. Select 'VPC with Public and Private Subnets', and click through to the next step.
 
@@ -37,23 +37,23 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 1. Set up the VPC using the settings below.  We'll be using a `t2.micro` instance for our NAT for this workshop, as it's covered by the AWS Free Tier.  You'll also need to set up a key pair as part of this, and download it to your local machine.  You'll need it in later steps.
 
-![VPC settings](7-vpcsettings.png)
+    ![VPC settings](7-vpcsettings.png)
 
 1. Click on the Network ACL attached to the VPC, go to the Inbound Rules tab, and click 'Edit inbound rules'.
 
-![ACL settings](8-aclsettings.png)
+    ![ACL settings](8-aclsettings.png)
 
 1. Remove the security rule that allows all outside traffic.  Then, do the same for the outbound rules.
 
-![ACL rules](9-lockdown.png)
+    ![ACL rules](9-lockdown.png)
 
 1. Go to 'Route tables' in the VPC sidebar, and have a look at how the ingress and egress rules are configured.  We'll come back to this in Part 2.
 
-![Route tables](10-routetables.png)
+    ![Route tables](10-routetables.png)
 
 1. Go to 'Subnets' in the VPC sidebar, and create a subnet using the following rules.  We need to do this so that there are two availability zones for the RDS database.
 
-![Create subnet](11-subnet.png)
+    ![Create subnet](11-subnet.png)
 
 ## Creating the EC2 instance
 
@@ -61,15 +61,15 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 1. Click on 'Create instance' and select the Amazon Linux 2 AMI.
 
-![Instance creation](12-ec2.png)
+    ![Instance creation](12-ec2.png)
 
 1. Select the VPC that you created, and then select the public subnet.
 
-![Network rules](13-ec2public.png)
+    ![Network rules](13-ec2public.png)
 
 1. Create a public security group to attach to the instance.  You'll notice that there's a warning at the bottom of the page.  If we leave this rule like this, then anyone will be able to SSH into the instance.  Get your Internet connection's public IP address (`!ip` in Google will give it to you), and then replace `0.0.0.0/0` with `your.ip.address.digits/32`.  This means that only people with your public IP address can acces the instance via SSH.
 
-![Security groups](14-ec2sg.png)
+    ![Security groups](14-ec2sg.png)
 
 ## Creating the database
 
@@ -79,11 +79,11 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 1. Attach the database to the VPC that you created in Step 2.
 
-![Database VPC](15-databasevpc.png)
+    ![Database VPC](15-databasevpc.png)
 
 1. Create a new private security group for the database.
 
-![Database security group](16-database.png)
+    ![Database security group](16-database.png)
 
 ## Testing
 
