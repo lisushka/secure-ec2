@@ -31,11 +31,11 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![VPC management page](5-vpc.png)
 
-1. Select 'VPC with Public and Private Subnets', and click through to the next step.
+1. Select 'VPC with a Single Public Subnet', and click through to the next step.
 
-![VPC creation wizard](6-vpctype.png)
+    ![VPC creation wizard](6-vpctype.png)
 
-1. Set up the VPC using the settings below.  We'll be using a `t2.micro` instance for our NAT for this workshop, as it's covered by the AWS Free Tier.  You'll also need to set up a key pair as part of this, and download it to your local machine.  You'll need it in later steps.
+1. Set up the VPC using the settings below.
 
     ![VPC settings](7-vpcsettings.png)
 
@@ -43,7 +43,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![ACL settings](8-aclsettings.png)
 
-1. Remove the security rule that allows all outside traffic.  Then, do the same for the outbound rules.
+1. Get your Internet connection's public IP address (`!ip` in Google will give it to you), and then replace `0.0.0.0/0` in the Source with `your.ip.address.digits/32`.  Then, do the same for the outbound rules.  This means that only people with your public IP address can access instances inside the network ACL.
 
     ![ACL rules](9-lockdown.png)
 
@@ -51,13 +51,9 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![Route tables](10-routetables.png)
 
-1. Go to 'Subnets' in the VPC sidebar, and create a subnet using the following rules.  We need to do this so that there are two availability zones for the RDS database.
+1. Go to 'Subnets' in the VPC sidebar, and create a subnet using the following rules and a different availability zone from the default subnet.  We need to do this so that there are two availability zones for the RDS database.
 
     ![Create subnet](11-subnet.png)
-
-1. Open ElastiCache, and click on the 'Subnet groups' link in the sidebar.  Create a subnet group with the following settings, and add the two private subnets to it.
-
-    ![Create subnet group](11-subnetgroup.png)
 
 ## Creating the EC2 instance
 
