@@ -24,4 +24,4 @@ If you want to learn more about analysing CloudTrail logs to detect security inc
 
 Once you're done here, proceed to [Part 4](../Step4) to clean everything up.
 
-[Back to home](./)
+[Back to home](../README.md)

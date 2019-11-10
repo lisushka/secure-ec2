@@ -93,4 +93,4 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 To continue the lab, go to [Step 2](../Step2).
 
-[Back to home](./)
+[Back to home](../README.md)
