@@ -53,7 +53,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 1. Go to 'Subnets' in the VPC sidebar, and create a subnet using the following rules.  We need to do this so that there are two availability zones for the RDS database.
 
-![Create subnet](11.subnet.png)
+![Create subnet](11-subnet.png)
 
 ## Creating the EC2 instance
 
@@ -93,4 +93,4 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 To continue the lab, go to [Step 2](../Step2).
 
-[Back to home](..)
+[Back to home](./)
