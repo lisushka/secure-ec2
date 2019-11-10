@@ -22,6 +22,6 @@ Amazon CloudTrail allows users to collect real-time logs that can be used to det
 
 If you want to learn more about analysing CloudTrail logs to detect security incidents, go to [this tutorial](https://github.com/aws-samples/aws-cloudtrail-analyzer-workshop) for instructions.
 
-Once you're done here, proceed to [Part 4](../Step4) to clean everything up.
+Once you're done here, proceed to [Part 4](../Part4) to clean everything up.
 
 [Back to home](../README.md)
