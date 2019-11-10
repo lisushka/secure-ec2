@@ -55,6 +55,10 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![Create subnet](11-subnet.png)
 
+1. Open ElastiCache, and click on the 'Subnet groups' link in the sidebar.  Create a subnet group with the following settings, and add the two private subnets to it.
+
+    ![Create subnet group](11-subnetgroup.png)
+
 ## Creating the EC2 instance
 
 1. Navigate back to the main console, and open the EC2 management page.
