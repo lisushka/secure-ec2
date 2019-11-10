@@ -34,17 +34,19 @@ In order to access our EC2 instance from the Internet, we need to add a public I
 
 1. Navigate back to the main console, and open the VPC management page.
 
-1. Click on the security group attached to the database (`public-sg` in this example).
+1. Open the 'Security groups' tab in the left sidebar, and click on the security group attached to the database (`public-sg` in this example).
 
+    ![AWS security groups](5-securitygroup.png)
 
+1. Click on the 'Inbound Rules' tab, and then click on 'Edit rules'.
 
-1. Select the VPC that you created, and then select the public subnet.
+    ![Edit security group](6-sgrules.png)
 
+1. Add rules for HTTP and HTTPS as follows, then do the same for the outbound rules.
 
+    ![Add HTTP/S rules](7-https.png)
 
-1. Create a public security group to attach to the instance.  Remove the default rule that it comes with - we'll configure this in the next step.
-
-
+You should now be able to access your EC2 instance in the browser.
 
 ## Accessing the web application in the browser
 
