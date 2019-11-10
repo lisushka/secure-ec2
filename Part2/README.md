@@ -42,7 +42,7 @@ In order to access our EC2 instance from the Internet, we need to add a public I
 
     ![Edit security group](6-sgrules.png)
 
-1. Add rules for HTTP and HTTPS as follows, then do the same for the outbound rules.
+1. Add rules for HTTP and HTTPS as follows.
 
     ![Add HTTP/S rules](7-https.png)
 
