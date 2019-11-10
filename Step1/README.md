@@ -67,7 +67,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 ![Network rules](13-ec2public.png)
 
-1. Create a public security group to attach to the instance.  Remove the default rule that it comes with - we'll configure this in the next step.
+1. Create a public security group to attach to the instance.  You'll notice that there's a warning at the bottom of the page.  If we leave this rule like this, then anyone will be able to SSH into the instance.  Get your Internet connection's public IP address (`!ip` in Google will give it to you), and then replace `0.0.0.0/0` with `your.ip.address.digits/32`.  This means that only people with your public IP address can acces the instance via SSH.
 
 ![Security groups](14-ec2sg.png)
 
