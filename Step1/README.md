@@ -33,7 +33,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
 1. Select 'VPC with Public and Private Subnets', and click through to the next step.
 
-    ![VPC creation wizard](6-vpctype.png)
+![VPC creation wizard](6-vpctype.png)
 
 1. Set up the VPC using the settings below.  We'll be using a `t2.micro` instance for our NAT for this workshop, as it's covered by the AWS Free Tier.  You'll also need to set up a key pair as part of this, and download it to your local machine.  You'll need it in later steps.
 
@@ -84,12 +84,6 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 1. Create a new private security group for the database.
 
     ![Database security group](16-database.png)
-
-## Testing
-
-1. SSH into your EC2 instance, and verify that you're able to connect to the database from it.  In the next step, we'll open this up so that we can access the EC2 instance from the Internet.
-
-(**this step is not currently working, as the code isn't hooked up yet**)
 
 To continue the lab, go to [Step 2](../Step2).
 
