@@ -1,7 +1,7 @@
 require "sinatra"
 require "sequel"
 
-SB = Sequel.connect(ENV['DATABASE_URL'])
+# DB = Sequel.connect(ENV['DATABASE_URL'])
 
 get '/' do
     erb :index
