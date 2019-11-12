@@ -1,6 +1,10 @@
 # Securing EC2 instances - the basics and more
 
-Introduction will go here when I manage to copy it off my work machine.
+EC2 instances are the backbone of AWS infrastructure.  Many of the things we do in AWS are based on EC2 instances behind the hood.
+
+Today, we're going to set up a web application which connects to an RDS (Relational Database Service), and secure it using network ingress and egress rules.  These rules control traffic in and out of instances.
+
+At the end of the workshop, we'll have an Internet-accessible web application which connects to a private RDS instance.  We will also have learned how to use network ingress and egress rules to control traffic.
 
 - [Part 1 - Infrastructure Setup](Part1/README.md)
 - [Part 2 - Configuring Traffic Rules](Part2/README.md)
