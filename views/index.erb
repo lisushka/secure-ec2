@@ -1,0 +1,9 @@
+<div style="margin: 0 auto;">
+    <h1>Name Lookup<h1>
+    <form method="POST">
+        <label for="last_name">Enter last name:</label>
+        <input id="last_name" name="last_name" type="text">
+        <button type="submit">Search</button>
+    </form>
+    <% if @error %><%= @error %><% end %>
+</div>
