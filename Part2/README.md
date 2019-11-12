@@ -24,7 +24,7 @@ In order to access our EC2 instance from the Internet, we need to add a public I
 
 ## Testing public access to the instance
 
-1. SSH into your EC2 instance using the key pair from Part 1, and verify that you're able to connect to the database from it.
+1. SSH into your EC2 instance using the key pair from Part 1, and verify that you're able to connect to the database from it.  You can get the SSH connection string by right-clicking on the instance in the EC2 dashboard and selecting `Connect`.
 
 1. Run the following command inside the EC2 instance:
 
@@ -52,7 +52,7 @@ In order to access our EC2 instance from the Internet, we need to add a public I
 
 1. Navigate back to the main console, and open the VPC management page.
 
-1. Open the 'Security groups' tab in the left sidebar, and click on the security group attached to the database (`public-sg` in this example).
+1. Open the 'Security groups' tab in the left sidebar, and click on the security group attached to the EC2 instance (`public-sg` in this example).
 
     ![AWS security groups](images/5-securitygroup.png)
 

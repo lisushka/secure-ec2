@@ -14,7 +14,7 @@ The principle of least privilege holds that we want people to have the exact amo
 
     ![IAM access types](images/2-accesstype.png)
 
-1. In the 'Permissions' section, select 'Attach existing policies directly', and then add the list of policies in the srceenshot below.  You can use the search bar to find them quickly.  Then, click through to the Review step, make sure that the list matches the one below, and click 'Create'.
+1. In the 'Permissions' section, select 'Attach existing policies directly', and then add the list of policies in the screenshot below.  You can use the search bar to find them quickly.  Then, click through to the Review step, make sure that the list matches the one below, and click 'Create'.
 
     ![IAM access policies](images/3-accesspolicies.png)
 
