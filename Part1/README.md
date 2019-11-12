@@ -85,6 +85,6 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![Database security group](16-database.png)
 
-To continue the lab, go to [Part 2](../Part2).
+To continue the lab, go to [Part 2](../Part2/README.md).
 
 [Back to home](../README.md)

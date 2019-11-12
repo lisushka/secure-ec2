@@ -52,6 +52,6 @@ You should now be able to access your EC2 instance in the browser.
 
 (**pending web application code**)
 
-To continue on to more advanced AWS security features, go to [Part 3](../Part3).
+To continue on to more advanced AWS security features, go to [Part 3](../Part3/README.md).
 
 [Back to home](../README.md)
