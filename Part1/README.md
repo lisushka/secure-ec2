@@ -47,7 +47,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![ACL rules](images/9-lockdown.png)
 
-1. Go to 'Route tables' in the VPC sidebar, and have a look at how the ingress and egress rules are configured.  We'll come back to this in Part 2.
+1. Go to 'Route tables' in the VPC sidebar, and have a look at how the ingress and egress rules are configured.  This will be covered in the advanced labs.
 
     ![Route tables](images/10-routetables.png)
 
