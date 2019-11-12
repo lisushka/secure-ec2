@@ -52,6 +52,8 @@ You should now be able to access your EC2 instance in the browser.
 
 (**pending web application code**)
 
+Even if you configure network rules to open the RDS instance to the Internet, you will still not be able to access it as it is not publically accessible by default.  If you want to access an RDS instance from the Internet, you need to set the 'Publically accessible' flag in `Connectivity > Additional connectivity configuration` to Yes.  You can do this by modifying the RDS instance after creation, as well as during the creation process.
+
 To continue on to more advanced AWS security features, go to [Part 3](../Part3/README.md).
 
 [Back to home](../README.md)
