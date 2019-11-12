@@ -26,9 +26,27 @@ In order to access our EC2 instance from the Internet, we need to add a public I
 
 1. SSH into your EC2 instance using the key pair from Part 1, and verify that you're able to connect to the database from it.
 
-1. Go to the public IP address that you allocated to your instance in the previous step.  You'll notice that even though the network ACL is configured to allow traffic from your IP address, you still can't access the web application on the instance.  That's because the security group doesn't have a rule to allow HTTPS traffic.  In the next step, we'll add this rule so that we can access the EC2 instance from the Internet.
+1. Run the following command inside the EC2 instance:
 
-(**this step is not currently working, as the code isn't hooked up yet**)
+    ```
+    git clone https://github.com/lisushka/secure-ec2
+    ```
+
+1. Run the following command to load data into the RDS instance:
+
+    ```
+    psql -U <database admin username> -h <RDS DNS name> -W
+    ```
+
+    The admin username was generated when you created the database in Part 1.  The RDS DNS name can be found on the RDS instance page under 'DNS name'.  The command line will prompt you for a password - this is the password that you gave when you created the database in Part 1.
+
+1. Run the following command to start the web application:
+
+    ```
+    bundle exec ./app.rb
+    ```
+
+1. Go to the public IP address that you allocated to your instance in the previous step.  You'll notice that even though the network ACL is configured to allow traffic from your IP address, you still can't access the web application on the instance.  That's because the security group doesn't have a rule to allow HTTPS traffic.  In the next step, we'll add this rule so that we can access the EC2 instance from the Internet.
 
 ## Opening up the security group attached to the EC2 instance
 
@@ -50,9 +68,13 @@ You should now be able to access your EC2 instance in the browser.
 
 ## Accessing the web application in the browser
 
-(**pending web application code**)
+Go to the public IP address that you allocated to your instance during the `Attaching a public IP address` step.  You should see an HTML page that looks like this:
 
-Even if you configure network rules to open the RDS instance to the Internet, you will still not be able to access it as it is not publically accessible by default.  If you want to access an RDS instance from the Internet, you need to set the 'Publically accessible' flag in `Connectivity > Additional connectivity configuration` to Yes.  You can do this by modifying the RDS instance after creation, as well as during the creation process.
+![Bland HTML search page](images/8-html.png)
+
+You can search the database by last name to verify that the EC2 instance is able to send and receive traffic to the RDS instance.
+
+**Note:** Even if you configure network rules to open the RDS instance to the Internet, you will still not be able to access it as it is not publically accessible by default.  If you want to access an RDS instance from the Internet, you need to set the 'Publically accessible' flag in `Connectivity > Additional connectivity configuration` to Yes.  You can do this by modifying the RDS instance after creation, as well as during the creation process.
 
 To continue on to more advanced AWS security features, go to [Part 3](../Part3/README.md).
 

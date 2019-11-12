@@ -85,6 +85,8 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![Database security group](images/16-database.png)
 
+Make sure that you save the admin username and password for the database.  We'll need these in Part 2.
+
 To continue the lab, go to [Part 2](../Part2/README.md).
 
 [Back to home](../README.md)
