@@ -8,19 +8,19 @@ In order to access our EC2 instance from the Internet, we need to add a public I
 
 1. Go to 'Elastic IPs' in the VPC sidebar, and click on 'Allocate new address'.
 
-    ![Elastic IP page](1-elasticip.png)
+    ![Elastic IP page](images/1-elasticip.png)
 
 1. Make sure you have 'Amazon pool' selected, and click on 'Allocate'.
 
-    ![Allocating Elastic IP](2-ipalloc.png)
+    ![Allocating Elastic IP](images/2-ipalloc.png)
 
 1. Right-click on your new IP address, and click 'Associate address'.
 
-    ![Associating IP address](3-associateip.png)
+    ![Associating IP address](images/3-associateip.png)
 
 1. Associate the Elastic IP address with your EC2 instance.
 
-    ![Add IP to instance](4-iptoinstance.png)
+    ![Add IP to instance](images/4-iptoinstance.png)
 
 ## Testing public access to the instance
 
@@ -36,15 +36,15 @@ In order to access our EC2 instance from the Internet, we need to add a public I
 
 1. Open the 'Security groups' tab in the left sidebar, and click on the security group attached to the database (`public-sg` in this example).
 
-    ![AWS security groups](5-securitygroup.png)
+    ![AWS security groups](images/5-securitygroup.png)
 
 1. Click on the 'Inbound Rules' tab, and then click on 'Edit rules'.
 
-    ![Edit security group](6-sgrules.png)
+    ![Edit security group](images/6-sgrules.png)
 
 1. Add rules for HTTP and HTTPS as follows.
 
-    ![Add HTTP/S rules](7-https.png)
+    ![Add HTTP/S rules](images/7-https.png)
 
 You should now be able to access your EC2 instance in the browser.
 
