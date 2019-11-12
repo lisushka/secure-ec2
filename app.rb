@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require "sinatra"
 require "sequel"
 
@@ -15,5 +17,7 @@ post '/' do
         next erb :index
     end
     # query
+    @names = DB[:names].where(last_name: last_name).map do
+        |row| [row.first_name, row.last_name]
     erb :index
 end
