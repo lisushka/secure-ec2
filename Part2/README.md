@@ -72,7 +72,7 @@ Go to the public IP address that you allocated to your instance during the `Atta
 
 ![Bland HTML search page](images/8-html.png)
 
-You can search the database by last name to verify that the EC2 instance is able to send and receive traffic to the RDS instance.
+You can search the database by last name to verify that the EC2 instance is able to send and receive traffic to and from the RDS instance.
 
 **Note:** Even if you configure network rules to open the RDS instance to the Internet, you will still not be able to access it as it is not publically accessible by default.  If you want to access an RDS instance from the Internet, you need to set the 'Publically accessible' flag in `Connectivity > Additional connectivity configuration` to Yes.  You can do this by modifying the RDS instance after creation, as well as during the creation process.
 
