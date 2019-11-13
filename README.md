@@ -11,4 +11,4 @@ At the end of the workshop, we'll have an Internet-accessible web application wh
 - [Part 3 - Other Security Features](Part3/README.md)
 - [Part 4 - Cleanup](Part4/README.md)
 
-Thank you to [Alice Jenkinson](https://kat.net.nz), [Robert W. McLeod](https://rob-mc.cloud), [Gary Wib](https://github.com/GaryWib) and the organisers of the [Melbourne AWS Programming and Tools meetup](https://blog.programming-tools-meetup.cloud) for assistance, debugging, and testing.
+Thank you to [Alice Jenkinson](https://kat.net.nz), [Robert W. McLeod](https://rob-mc.cloud), [Gary Wib](https://github.com/GaryWib), and the organisers of the [Melbourne AWS Programming and Tools meetup](https://blog.programming-tools-meetup.cloud) for assistance, debugging, and testing.

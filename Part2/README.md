@@ -38,11 +38,14 @@ In order to access our EC2 instance from the Internet, we need to add a public I
     psql -U <database admin username> -h <RDS DNS name> -W
     ```
 
-    The admin username was generated when you created the database in Part 1.  The RDS DNS name can be found on the RDS instance page under 'DNS name'.  The command line will prompt you for a password - this is the password that you gave when you created the database in Part 1.
+    The admin username was generated when you created the database in Part 1.  The RDS DNS name can be found on the RDS instance page under 'DNS name'.  The command line will prompt you for a password - this is the password that you gave when you created the database in Part 1.  Then, you'll need to give it the name of the file we're importing.
 
-1. Run the following command to start the web application:
+1. Run the following commands to set up and start the web application:
 
     ```
+    yum install postgresql-devel
+    yum install ruby-devel
+    bundle install --path vendor/bundle
     bundle exec ./app.rb
     ```
 
