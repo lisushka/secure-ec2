@@ -43,7 +43,7 @@ Virtual Private Clouds (VPCs) allow us to isolate a group of resources from the 
 
     ![ACL settings](images/8-aclsettings.png)
 
-1. Get your Internet connection's public IP address (`!ip` in Google will give it to you), and then replace `0.0.0.0/0` in the Source with `your.ip.address.digits/32`.  Then, do the same for the outbound rules.  This means that only people with your public IP address can access instances inside the network ACL.
+1. Get your Internet connection's public IP address (`!ip` in Google will give it to you), and then replace `0.0.0.0/0` in the Source with `your.ip.address.digits/32`.  This means that only people with your public IP address can access instances inside the network ACL.
 
     ![ACL rules](images/9-lockdown.png)
 
